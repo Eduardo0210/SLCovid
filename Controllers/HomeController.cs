@@ -10,7 +10,7 @@ namespace SLCovid.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("Main");
         }
 
         public ActionResult About()
