@@ -5,8 +5,8 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +22,87 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*General propouse*/
+
+.container {
+padding:0 20px 0px 20px;
+text-align:right;
+}
+
+/*General propouse*/
+
+
+/*Menu´s styles*/
+/*Add all styles to menu*/
+.navbar {
+    text-align: right;
+    background-color: #00935A;
+    padding-right:30px;
+    height: 50px;
+}
+.nav {
+    list-style: none;  
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 19px;
+    color:white;
+
+}
+
+    .nav li a {
+    color:white;
+    text-decoration:none;
+    }
+    .nav li a:hover {
+        color: blue;
+        
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+/*Menu´s styles*/
+
+ 
+/*Main page*/
+.main-title {
+
+    
+}
+
+.main-content {
+    height: 500px;
+    display:inline-flex;
+    
+    width:100%;
+}
+.main-content__menu {
+    width: 30%;
+    height:auto;
+    text-align:left;
+}
+.main-content__image {
+    width: 70%;
+    height: auto;
+    
+}
+
+.m-c__menu__list {
+    line-height: 22px;
+    text-decoration: none;
+    list-style: none;
+}
+.m-c__menu__list li a {
+    text-decoration: none;
+    background-color: cadetblue;
+    color:white;
+    padding:2px 95px 2px 25px;
+
+}
+
+/*Main page*/
