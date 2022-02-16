@@ -26,5 +26,12 @@ namespace SLCovid.Controllers
 
             return View();
         }
+
+        public ActionResult PracticeView()
+        {
+            
+
+            return View();
+        }
     }
 }
