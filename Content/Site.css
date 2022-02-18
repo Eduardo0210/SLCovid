@@ -31,7 +31,7 @@ padding:0 50px 0px 50px;
 /*General propouse*/
 
 /*Menu´s styles*/
-/*Add all styles to menu*/
+
 .navbar {
     display:inline-flex;
     padding-right:30px;
@@ -66,7 +66,7 @@ padding:0 50px 0px 50px;
 
 .header-presentation__container {
 width:100%;
-height:400px;
+height:220px;
 }
 .green-presentation {
     width: 100%;
@@ -81,13 +81,43 @@ height:400px;
 }
 
 section {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 /*Menu´s styles*/
 
  
 /*Main page*/
-.main-title {    
+
+.dataMun-welcome {
+margin-top:30px;
+letter-spacing:1px;
+margin-left:50px;
+}
+
+.title-container {
+    display:grid;
+    align-content:center !important;
+    width:100%;
+    position:relative;
+}
+    .title-container i {
+    font-size:35px;
+    margin-top: 10px;
+
+    }
+
+    .title-container img {
+        height: 100px;
+        right: 10px;
+        position: absolute;
+    }
+
+.dataMun {
+color:#8098BF;
+font-weight:bold;
+}
+
+.main-title {
 }
 
 .main-content {
@@ -96,7 +126,6 @@ section {
     width:100%;
 }
 .main-content__menu {
-    border:1px solid green;
     width: 30%;
     height:auto;
     text-align:left;
@@ -104,20 +133,29 @@ section {
 .main-content__image {
     width: 70%;
     height: auto;
-    border: 1px solid red;
+    
 }
 
 .m-c__menu__list {
-    line-height: 22px;
+    line-height: 25px;
     text-decoration: none;
     list-style: none;
 }
 .m-c__menu__list li a {
     text-decoration: none;
-    background-color: cadetblue;
+    background-color: #8098BF;
+    border-radius:2px;
     color:white;
-    padding:2px 95px 2px 25px;
+    padding:3px 115px 3px 25px;
+    font-size: 16px;
+}
+    .m-c__menu__list li a:hover {
+    background-color:#1D9348;
+    }
 
+.mainImage {
+width:100%;
+max-height:400px;
 }
 
 .goodPractices-container {
