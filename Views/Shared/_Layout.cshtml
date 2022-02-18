@@ -1,32 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>@ViewBag.Title - Soluciones Locales COVID</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div class="navbar">
+        <img class="navbar-iamges__first" src="~/assets/imgs/logos-coneval__header.png" />
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
+
+            <div class="navbar-header" style="display:none;">
+                <i class="fa-solid fa-bars"></i>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Practica", "PracticeView", "Home")</li>
-                    <li>@Html.ActionLink("General", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Inicio", "PracticeView", "Home")</li>
+                    <li>@Html.ActionLink("Proyecto", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Acerca de", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>
             </div>
+
         </div>
+        <img class="navbar-iamges__second" src="~/assets/imgs/logos-header.png" />
     </div>
     <div class="container body-content">
         @RenderBody()
