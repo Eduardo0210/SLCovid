@@ -1,13 +1,12 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 <div class="container">
     <div class="header-presentation__container">
         <div class="green-presentation">
-
         </div>
         <div class="blue-presentation">
-
         </div>
     </div>
     <div class="dataMun-welcome">
@@ -17,7 +16,6 @@
         <p><i class="fa fa-house"></i></p>
         <img src="~/assets/imgs/Logo_Buenas_Practicas_horizontal.png" />
     </div>
-
 
     <section>
         <div class="main-content">
@@ -44,7 +42,81 @@
             </div>
         </div>
     </section>
+   
     <section>
+        <div class="recognizedPractices-container">
+            <div class="recognizedPractices_title">
+                <h3 class="title-recognizedPractices">Prácticas Reconocidas</h3>
+            </div>
+
+            <div class="recognizedPractices_filters">
+                
+                <div class="space-text">
+                    <b>FILTROS :</b>
+                </div>
+                <div class="grid-select__container">
+                    <div>
+                        <select>
+                            <option>Categoría</option>
+                        </select>
+
+                        <select class="mt-5">
+                            <option>Año</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select>
+                            <option>Sector</option>
+                        </select>
+
+                        <select class="mt-5">
+                            <option>Estado</option>
+                            <option value="1">Aguascalientes</option>
+                            <option value="2"> Baja California</option>
+                            <option value="3"> Baja California Sur</option>
+                            <option value="4"> Campeche</option>
+                            <option value="5"> Chiapas</option>
+                            <option value="6"> Chihuahua</option>
+                            <option value="32"> Ciudad de México</option>
+                            <option value="7"> Coahuila</option>
+                            <option value="8"> Colima</option>
+                            <option value="9"> Durango</option>
+                            <option value="10"> Estado de México</option>
+                            <option value="11"> Guanajuato</option>
+                            <option value="12"> Guerrero</option>
+                            <option value="13"> Hidalgo</option>
+                            <option value="14"> Jalisco</option>
+                            <option value="15"> Michoacán</option>
+                            <option value="16"> Morelos</option>
+                            <option value="17"> Nayarit</option>
+                            <option value="18"> Nuevo León</option>
+                            <option value="19"> Oaxaca</option>
+                            <option value="20"> Puebla</option>
+                            <option value="21"> Querétaro</option>
+                            <option value="22"> Quintana Roo</option>
+                            <option value="23"> San Luis Potosí</option>
+                            <option value="24"> Sinaloa</option>
+                            <option value="25"> Sonora</option>
+                            <option value="26"> Tabasco</option>
+                            <option value="27"> Tamaulipas</option>
+                            <option value="28"> Tlaxcala</option>
+                            <option value="29"> Veracruz</option>
+                            <option value="30"> Yucatán</option>
+                            <option value="31"> Zacatecas</option>
+                        </select>
+                    </div>
+
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="map-container">        
+            <div id="svgMapa"></div>        
+    </div>
+
+    <section class="mt-100">
         <div class="goodPractices-container">
             <h3>¿Qué es el Repositorio de Buenas prácticas?</h3>
             <div class="goodPractices-text">
@@ -53,7 +125,6 @@
                     nacional para afrontar la crisis generada por la COVID-19, así como, en monitoreo y
                     evaluación de la política pública/social.  ¡inspírate y aplícalas!
                 </p>
-
                 <p>
                     Se considerarán "buenas prácticas" aquellas estrategias, programas o acciones diseñadas
                     e implementadas con base en evidencia para minimizar las afectaciones económicas y a
@@ -71,27 +142,7 @@
 
         <iframe style="width:100%; height:auto" src="https://www.youtube.com/embed/LAKfxLsnEyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-     
-    <section>
-        <div class="recognizedPractices-container">
-            <div class="recognizedPractices_title">
-                <h3>Prácticas Reconocidas</h3>
-            </div>
 
-            <div class="recognizedPractices_filters">
-                <b>ESPACIO PARA CATALOGOS Y FILTROS PARA MAPA</b>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="map-container">
-
-        <div class="mapMain">
-            <h2>Espacio para mapa de la república</h2>
-        </div>
-
-    </div>
     <section>
         <div class="carousel-container">
 
@@ -102,3 +153,157 @@
         </div>
     </section>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+    //Función encargada de inicializar el mapa
+window.inicializarMapa = function inicializarMapa(svgObj){
+     
+     //Cargamos los datos de ventas por región
+     //desde nuestro archivo JSON
+     jQuery.getJSON('', function(data, textStatus, jqXHR){
+       infoMapa.datos = data;
+     });
+    
+     //Guardamos los colores originales de cada región, los
+     //usaremos luego para "desactivar" la región activa
+     jQuery('.Region').each(function(index, element){
+       infoMapa.colores[element.id] = jQuery(element).css('fill');
+	 });
+	 
+	 jQuery('#estado').on('change', function(e){
+       var datosRegion,
+           RegionNueva;
+			// // // // debugger;
+	document.getElementById("Mapasvgdiv").classList.remove("hide");
+	document.getElementById("example").classList.add("hide");
+	document.getElementById("select-estado-hino").appendChild(this)
+       //Reestablece los colores de la región anterior
+       if(infoMapa.regionActiva!==''){
+         jQuery('#'+infoMapa.regionActiva).css({
+           'fill': infoMapa.colores[infoMapa.regionActiva],
+           'stroke-width': 0.5
+         });
+    
+         //Caso especial de #RegionInsular: es un path
+         //compuesto, y debemos afectar a los subpaths también
+         jQuery('#'+infoMapa.regionActiva).find('path').css({
+           'fill': infoMapa.colores[infoMapa.regionActiva],
+           'stroke-width': 0.5
+         });
+    
+       };
+    
+       RegionNueva = jQuery('#estado-'+this.value);
+    
+       //guardamos el nombre de la región activa:
+	   infoMapa.regionActiva = RegionNueva.attr('id');
+	   
+    
+       //Resaltamos al zona seleccionada (y los subpaths):
+       RegionNueva.css({
+         'fill': 'red',
+         'stroke-width': 1
+       }).find('path').css({
+         'fill': 'red',
+         'stroke-width': 1
+       });
+    
+       //Y mostramos los datos en el cuadro de detalle:
+       datosRegion = infoMapa.datos[infoMapa.regionActiva];
+    
+       
+       pintarCampos(principal,RegionNueva.attr('name').toString())
+    
+       //y no queremos que #divDatos se entere de este clic: 
+       e.stopPropagation();
+     });
+   
+    
+    jQuery('.Region').on('click', function(e){
+       var datosRegion,
+           RegionNueva;
+
+	
+	
+            
+       //Reestablece los colores de la región anterior
+       if(infoMapa.regionActiva!==''){
+         jQuery('#'+infoMapa.regionActiva).css({
+           'fill': infoMapa.colores[infoMapa.regionActiva],
+           'stroke-width': 0.5
+         });
+    
+         //Caso especial de #RegionInsular: es un path
+         //compuesto, y debemos afectar a los subpaths también
+         jQuery('#'+infoMapa.regionActiva).find('path').css({
+           'fill': infoMapa.colores[infoMapa.regionActiva],
+           'stroke-width': 0.5
+         });
+    
+       };
+    
+       RegionNueva = jQuery(this);
+	   var name = RegionNueva.attr('name');
+
+	   $("#estado option:contains(" + name  + ")").attr('selected', 'selected'); 
+       //guardamos el nombre de la región activa:
+       infoMapa.regionActiva = RegionNueva.attr('id');
+    
+       //Resaltamos al zona seleccionada (y los subpaths):
+       RegionNueva.css({
+         'fill': 'red',
+         'stroke-width': 1
+       }).find('path').css({
+         'fill': 'red',
+         'stroke-width': 1
+       });
+    
+       //Y mostramos los datos en el cuadro de detalle:
+       datosRegion = infoMapa.datos[infoMapa.regionActiva];
+    
+	   pintarCampos(principal,RegionNueva.attr('name').toString())
+       
+	   
+       //y no queremos que #divDatos se entere de este clic: 
+       e.stopPropagation();
+     });
+    };
+    
+
+    $(document).ready(function () {
+
+        //Carga el mapa y lo inicializa 
+        $('#svgMapa').svg({
+            'loadURL': './assets/imgs/Mexico_7FB9BD.svg',
+            'onLoad': window.inicializarMapa
+        });
+
+        //Si un clic en el mapa no viene de ninguna de las 9
+        //regiones se borra el detalle y quita el resaltado.
+        $('#svgMapa').on('click', 'path', function (e) {
+
+            if (infoMapa.regionActiva == '') {
+                return;
+            }
+
+            //Quita el resaltado de la región activa
+            $('#' + infoMapa.regionActiva).css({
+                'fill': infoMapa.colores[infoMapa.regionActiva],
+                'stroke-width': 0.5
+            }).find('path').css({
+                'fill': infoMapa.colores[infoMapa.regionActiva],
+                'stroke-width': 0.5
+            });
+
+            //Y borra el cuadro de detalle
+
+
+            infoMapa.regionActiva = '';
+
+
+        });
+    });
+
+</script>

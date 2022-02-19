@@ -17,7 +17,6 @@
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
-select,
 textarea {
     max-width: 280px;
 }
@@ -28,17 +27,23 @@ textarea {
 padding:0 50px 0px 50px;
 
 }
+
+.mt-5 {
+
+margin-top:50px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
 /*General propouse*/
-
 /*Menu´s styles*/
-
 .navbar {
-    display:inline-flex;
-    padding-right:30px;
+    display: inline-flex;
+    padding-right: 30px;
     height: 50px;
-    width:100%;
-    align-content:center;
-    justify-content:center;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
 }
 .nav {
     list-style: none;  
@@ -81,7 +86,7 @@ height:220px;
 }
 
 section {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 /*Menu´s styles*/
 
@@ -121,7 +126,7 @@ font-weight:bold;
 }
 
 .main-content {
-    height: 500px;
+    height: 400px;
     display:inline-flex;
     width:100%;
 }
@@ -158,6 +163,13 @@ width:100%;
 max-height:400px;
 }
 
+.title-recognizedPractices {
+
+    color:deeppink;
+    font-size:35px;
+
+}
+
 .goodPractices-container {
     border: 1px solid black;
     height: 400px;
@@ -184,27 +196,75 @@ max-height:400px;
 }
 
 .recognizedPractices-container {
-    height:500px;
-    border:1px solid red;
-
+    height:500px;    
+    overflow:hidden;
 }
 
 .recognizedPractices_title {
 text-align:center;
 }
 
-.map-container {
-height:600px;
-border:1px solid black;
-display: grid;
-justify-content:center !important;
-position:relative;
-align-content:center;
-
+.recognizedPractices_filters {    
+    height:100%;
 }
-.mapMain {
-    align-content: end;
-    height:auto;
+
+.grid-select__container {
+    
+    height:100%;
+    display:inline-flex;
+    width:100%;
+    
+}
+
+.grid-select__container div {            
+    width: 50%;
+}
+select {
+    /* styling */
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+    /* reset */
+
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.grid-select__container div select {
+    width: 40%;
+    background-color: deeppink;
+    border: none;
+    height: 50px;
+    color: white;
+    font-weight: 600;
+    padding-left: 50px;
+    font-size: 20px;
+    margin-left: 10vh;
+    background-image: url('../assets/imgs/Arrow.png');    
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 10px) calc(1em + 2px);
+    background-size: 30px 30px, 30px 30px, 1px 1px;
+    background-repeat: no-repeat;
+}
+
+.map-container {
+    height: auto;
+    position: relative;
+    overflow:hidden;
+    padding-top:0;
+    
+}
+
+#svgMapa {
+    scale: .5;
+    transform: translateY(-50%);
+    padding: -200px;
 }
 
 .carousel-container {

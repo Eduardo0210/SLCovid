@@ -23,6 +23,9 @@ namespace SLCovid
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/bundles/jquery/svg-master").Include(
+                     "~/Scripts/svg-master/jquery.svg.js", "~/Scripts/svg-master/jquery.svgdom.js"));
         }
     }
 }

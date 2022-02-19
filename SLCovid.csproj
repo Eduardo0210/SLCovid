@@ -128,9 +128,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\imgs\Arrow.png" />
     <Content Include="assets\imgs\logos-coneval__header.png" />
     <Content Include="assets\imgs\logos-header.png" />
     <Content Include="assets\imgs\Logo_Buenas_Practicas_horizontal.png" />
+    <Content Include="assets\imgs\Mexico_7FB9BD.svg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -153,6 +155,19 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <None Include="Scripts\MasterFileDB.json" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\svg-master\jquery.svg.css" />
+    <Content Include="Scripts\svg-master\jquery.svg.js" />
+    <Content Include="Scripts\svg-master\jquery.svg.min.js" />
+    <Content Include="Scripts\svg-master\jquery.svganim.js" />
+    <Content Include="Scripts\svg-master\jquery.svganim.min.js" />
+    <Content Include="Scripts\svg-master\jquery.svgdom.js" />
+    <Content Include="Scripts\svg-master\jquery.svgdom.min.js" />
+    <Content Include="Scripts\svg-master\jquery.svgfilter.js" />
+    <Content Include="Scripts\svg-master\jquery.svgfilter.min.js" />
+    <Content Include="Scripts\svg-master\jquery.svggraph.js" />
+    <Content Include="Scripts\svg-master\jquery.svggraph.min.js" />
+    <Content Include="Scripts\svg-master\jquery.svgplot.js" />
+    <Content Include="Scripts\svg-master\jquery.svgplot.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -169,6 +184,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Main.cshtml" />
     <Content Include="Views\Home\PracticeView.cshtml" />
+    <Content Include="Scripts\svg-master\kbw.svg.jquery.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
