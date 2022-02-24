@@ -42,7 +42,7 @@
             </div>
         </div>
     </section>
-   
+
     <section>
         <div class="recognizedPractices-container">
             <div class="recognizedPractices_title">
@@ -50,12 +50,12 @@
             </div>
 
             <div class="recognizedPractices_filters">
-                
+
                 <div class="space-text">
                     <b>FILTROS :</b>
                 </div>
                 <div class="grid-select__container">
-                    <div>
+                    <div class="left-container">
                         <select>
                             <option>Categoría</option>
                         </select>
@@ -64,7 +64,7 @@
                             <option>Año</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="right-container">
                         <select>
                             <option>Sector</option>
                         </select>
@@ -106,15 +106,16 @@
                         </select>
                     </div>
 
-                    </div>
+                </div>
             </div>
 
         </div>
-    </section>
 
-    <div class="map-container">        
-            <div id="svgMapa"></div>        
+    </section>
+    <div class="map-container">
+        <div id="svgMapa"></div>
     </div>
+
 
     <section class="mt-100">
         <div class="goodPractices-container">
@@ -276,7 +277,7 @@ window.inicializarMapa = function inicializarMapa(svgObj){
 
         //Carga el mapa y lo inicializa 
         $('#svgMapa').svg({
-            'loadURL': './assets/imgs/Mexico_7FB9BD.svg',
+            'loadURL': './assets/imgs/Mexico_21409A (1).svg',
             'onLoad': window.inicializarMapa
         });
 

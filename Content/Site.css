@@ -196,7 +196,7 @@ max-height:400px;
 }
 
 .recognizedPractices-container {
-    height:500px;    
+    height:auto;   
     overflow:hidden;
 }
 
@@ -209,34 +209,39 @@ text-align:center;
 }
 
 .grid-select__container {
-    
-    height:100%;
+
     display:inline-flex;
     width:100%;
-    
 }
 
 .grid-select__container div {            
     width: 50%;
+   
 }
-select {
-    /* styling */
-    background-color: white;
-    border: thin solid blue;
-    border-radius: 4px;
-    display: inline-block;
-    font: inherit;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-    /* reset */
 
-    margin: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
+    .grid-select__container .left-container {
+        text-align: center;
+    }
+
+
+    select {
+        /* styling */
+        background-color: white;
+        border: thin solid blue;
+        border-radius: 4px;
+        display: inline-block;
+        font: inherit;
+        line-height: 1.5em;
+        padding: 0.5em 3.5em 0.5em 1em;
+        /* reset */
+
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
 .grid-select__container div select {
     width: 40%;
     background-color: deeppink;
@@ -254,11 +259,11 @@ select {
 }
 
 .map-container {
+    margin-top:50px;
     height: auto;
     position: relative;
     overflow:hidden;
-    padding-top:0;
-    
+    padding-top:0;    
 }
 
 #svgMapa {
