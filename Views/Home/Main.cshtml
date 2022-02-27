@@ -116,7 +116,6 @@
         <div id="svgMapa"></div>
     </div>
 
-
     <section class="mt-100">
         <div class="goodPractices-container">
             <h3>¿Qué es el Repositorio de Buenas prácticas?</h3>
@@ -139,23 +138,73 @@
         </div>
     </section>
 
-    <div class="videoGoodPractices-container">
+    <div class="videoGoodPractices-container mt-5">
 
         <iframe style="width:100%; height:auto" src="https://www.youtube.com/embed/LAKfxLsnEyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <section>
-        <div class="carousel-container">
+        <div class="carousel-container mt-5">
 
             <div class="mapMain">
-                <h2>Espacio para carrusel de imagenes</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+
+                            <img src="~/assets/imgs/tecnologia-.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img src="~/assets/imgs/produccion_agricola.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
+
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img src="~/assets/imgs/tecnologia-.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+
+                            <img src="~/assets/imgs/produccion_agricola.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
+
+                        </div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
             </div>
 
         </div>
     </section>
+    <img style="width:100%;" class="mt-100" src="~/assets/imgs/WhatsApp Image 2022-02-25 at 5.53.08 PM.jpeg" />
+    <section class="mt-100">
+        <div class="dudas-banner__container">
+            <p> <b>¿Tienes dudas?</b><br />Escríbenos a <br /> entidadesfederativas@@coneval.org.mx</p>
+           <p><i class="fa-solid fa-headset"></i></p>
+        </div>
+        
+    </section>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@Html.Raw("@")splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 <script>
 
     //Función encargada de inicializar el mapa
@@ -269,11 +318,30 @@ window.inicializarMapa = function inicializarMapa(svgObj){
 	   
        //y no queremos que #divDatos se entere de este clic: 
        e.stopPropagation();
-     });
+    });
+
+    document.getElementById("CHI").style.fill = "#1D9348";
+
     };
     
 
     $(document).ready(function () {
+
+        
+
+        var swiper = new Swiper(".swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
 
         //Carga el mapa y lo inicializa 
         $('#svgMapa').svg({
@@ -303,8 +371,12 @@ window.inicializarMapa = function inicializarMapa(svgObj){
 
             infoMapa.regionActiva = '';
 
+          
 
         });
     });
+
+
+    
 
 </script>

@@ -128,12 +128,37 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\imgs\agricultura-e1551193452226.jpg" />
     <Content Include="assets\imgs\Arrow.png" />
+    <Content Include="assets\imgs\Categoría1_Intervenciones.PNG" />
+    <Content Include="assets\imgs\Categoría2_Estrategias.PNG" />
+    <Content Include="assets\imgs\Categoría3_Rendición.PNG" />
+    <Content Include="assets\imgs\Categoría4_Abierta.PNG" />
+    <Content Include="assets\imgs\Coop_AlemaniaMéxico.png" />
+    <Content Include="assets\imgs\facebook.png" />
+    <Content Include="assets\imgs\gmail.png" />
+    <Content Include="assets\imgs\home.png" />
+    <Content Include="assets\imgs\Igualdad-Laboral.jpg" />
+    <Content Include="assets\imgs\Instagram.png" />
+    <Content Include="assets\imgs\interrogacion.png" />
     <Content Include="assets\imgs\logos-coneval__header.png" />
     <Content Include="assets\imgs\logos-header.png" />
     <Content Include="assets\imgs\Logo_Buenas_Practicas_horizontal.png" />
     <Content Include="assets\imgs\Mexico_21409A %281%29.svg" />
     <Content Include="assets\imgs\Mexico_7FB9BD.svg" />
+    <Content Include="assets\imgs\me_gusta.png" />
+    <Content Include="assets\imgs\PieBlog.svg" />
+    <Content Include="assets\imgs\pieFb.svg" />
+    <Content Include="assets\imgs\pieIt.svg" />
+    <Content Include="assets\imgs\pieTwttr.svg" />
+    <Content Include="assets\imgs\pieYt.svg" />
+    <Content Include="assets\imgs\produccion_agricola.jpg" />
+    <Content Include="assets\imgs\Sello_Datos.jpg" />
+    <Content Include="assets\imgs\share.png" />
+    <Content Include="assets\imgs\tecnologia-.jpg" />
+    <Content Include="assets\imgs\twitter.png" />
+    <Content Include="assets\imgs\whatsap.png" />
+    <Content Include="assets\imgs\WhatsApp Image 2022-02-25 at 5.53.08 PM.jpeg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

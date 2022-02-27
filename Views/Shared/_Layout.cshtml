@@ -6,40 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>@ViewBag.Title - Soluciones Locales COVID</title>
+    <link rel="stylesheet"
+          href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar">
-        <img class="navbar-iamges__first" src="~/assets/imgs/logos-coneval__header.png" />
-        <div class="container">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="col-sm-2 navbar-header ">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img style="height:100%;max-width:200px" src="~/assets/imgs/Coop_AlemaniaMéxico.png" />
+                        </a>
+                    </div>
 
-            <div class="navbar-header" style="display:none;">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "PracticeView", "Home")</li>
-                    <li>@Html.ActionLink("Proyecto", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                </ul>
-            </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="col-sm-7 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Inicio </a></li>
+                            <li><a href="#">Proyecto</a></li>
+                            <li><a href="#">Acerca de</a></li>
+                            <li><a href="#">Contacto</a></li>
 
-        </div>
-        <img class="navbar-iamges__second" src="~/assets/imgs/logos-header.png" />
-    </div>
+                        </ul>
+
+
+                    </div><!-- /.navbar-collapse -->
+
+                    <div class="col-sm-3 socialMedia-container">
+                        <div class="header-menu__text">
+                            <p>Lo que se mide <b>se puede mejorar</b></p>
+                        </div>
+                        <div class="header-menu__icons">
+                            <img src="~/assets/imgs/facebook.png" />
+                            <img src="~/assets/imgs/twitter.png" />
+                            <img src="~/assets/imgs/gmail.png" />
+                            <img src="~/assets/imgs/Instagram.png" />
+
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+                </div>
+</nav>
+    </header>
+    
+
     <div class="container body-content">
         @RenderBody()
-        <hr />
+        <hr class="mt-100" />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Soluciones Locales COVID</p>
+
+            <div class="row pieCnvl">
+                <div class="footer-header">
+                    <div class="col-sm-3">
+                        <img src="~/assets/imgs/Igualdad-Laboral.jpg" />
+                    </div>
+                    <div class="col-sm-6" style="text-align:center;">
+                        Av. Insurgentes Sur # 810, colonia Del Valle, Alcaldía Benito Juárez, C.P. 03100, Ciudad de México. Conmutador: (01-55) 54-81-72-00<br>Horario de Oficialía de partes: lunes a viernes de 9:30 a 14:30 horas, y, de 16:00 a 19:00 horas. <br>Si tienes dudas sobre la información publicada en la página web, envía tu consulta al correo: <a href="mailto:%20consultas@coneval.org.mx" class="afooter" target="_blank">consultas@coneval.org.mx</a>.  <br> Si deseas solicitar información al CONEVAL, ejerciendo tu derecho de acceso a la información, presenta tu solicitud aquí:
+                        <a href="https://www.plataformadetransparencia.org.mx/" class="afooter" target="_blank">https://www.plataformadetransparencia.org.mx/</a> <br>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="~/assets/imgs/Sello_Datos.jpg" />
+                    </div>
+                </div>
+                <div class="horizontal-line mt-5"></div>
+            </div>
+            <div class="footer-body row">
+                <div class="col-sm-8 liIzq">
+                    <div class="row">
+                        <li class="linkExt"><a style="color:#7a7a7a;" href="/OIC/Paginas/Quejas,-Denuncias-y-Peticiones.aspx">Denuncia ante el OIC</a></li>
+                        <li class="linkExt"><a style="color:#7a7a7a;" href="http://inicio.ifai.org.mx/SitePages/ifai.aspx" target="_blank">INAI</a></li>
+                        <li class="linkExt"><a style="color:#7a7a7a;" href="https://consultapublicamx.inai.org.mx/vut-web/?idSujetoObigadoParametro=110&amp;idEntidadParametro=33&amp;idSectorParametro=21" target="_blank">SIPOT</a></li>
+                        <li class="linkExt"><a style="color:#7a7a7a;" href="/transparencia/Paginas/Default.aspx">Transparencia</a></li>
+                    </div>
+                    <div class="row liIzq2">
+                        <li class="linkExt"><a href="/normateca/Paginas/Normateca.aspx">Normateca</a></li>
+                        <li class="linkExt"><a href="/transparencia/Paginas/Proteccion_Datos_Personales.aspx">Protección de datos personales</a></li>
+                    </div>
+
+                </div>
+                <div class="col-md-3 liDer">
+                    <div class="col-md-1 liDerSep"></div>
+                    <li class="aDer"><a href="/Paginas/Pie/SitiosRelacionados.aspx">Sitios Relacionados</a></li>
+                    <li class="aDer"><a href="/Paginas/Pie/GlosarioTerminos.aspx">Glosario de Términos</a></li>
+                    <li class="aDer"><a href="/Paginas/Pie/MapadelSitio.aspx">Mapa de Sitio</a></li>
+                    <li class="aDer"><a href="/Paginas/Pie/localizacion.aspx">Nuestra Ubicación</a></li>
+                    <li class="aDer"><a href="/transparencia/Paginas/Inventario_de_Avisos_de_Privacidad_CONEVAL.aspx">Avisos de privacidad</a></li>
+                    <li class="aDer"><a href="/Paginas/Pie/terminos-uso-libre.aspx">Términos de uso libre</a></li>
+                </div>
+                <div class="image-container">
+                    <img src="~/assets/imgs/PieBlog.svg" />
+                    <img src="~/assets/imgs/pieFb.svg" />
+                    <img src="~/assets/imgs/pieIt.svg" />
+                    <img src="~/assets/imgs/pieTwttr.svg" />
+                    <img src="~/assets/imgs/pieYt.svg" />
+                </div>
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="footer-f">
+
+            </div>
+
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jquery/svg-master")
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

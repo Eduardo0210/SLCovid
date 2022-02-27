@@ -23,21 +23,16 @@ textarea {
 
 /*General propouse*/
 
-.container {
-padding:0 50px 0px 50px;
-
-}
-
 .mt-5 {
-
-margin-top:50px;
+ margin-top:50px !important;
 }
+
 .mt-100 {
-    margin-top: 100px;
+    margin-top: 100px !important;
 }
 /*General propouse*/
 /*Menu´s styles*/
-.navbar {
+/*.navbar {
     display: inline-flex;
     padding-right: 30px;
     height: 50px;
@@ -67,11 +62,65 @@ margin-top:50px;
 
     .navbar-toggle {
         display: none;
+    }*/
+
+
+
+
+.socialMedia-container {
+   display:grid;
+   grid-row:2;
+   margin-top: 15px;
+}
+
+    .socialMedia-container div img{    
+    width: 27px;
+    margin-right: 8px;
+    margin-left:6px;
     }
 
+
+.header-menu__text {
+
+color:#455DA1;
+}
+
+.navbar-collapse {
+    position: relative;
+    width: 50% !important;
+}
+
+#bs-example-navbar-collapse-1 ul {
+    position:absolute;
+    left:25%;
+    transform:translateX(-10%);
+}
+.navbar-default {
+    
+}
+.navbar-nav {
+    position: relative;
+}
+
+    .navbar-nav li {
+        margin-top: 20px;
+    }
+
+.navbar-header {
+    height: 100px;
+    position: relative;
+}
+
+.navbar-brand {
+height:100%;
+}
+.navbar-brand img {
+    height: 100%;
+}
+
 .header-presentation__container {
-width:100%;
-height:220px;
+    width: 100%;
+    height: 220px;
 }
 .green-presentation {
     width: 100%;
@@ -88,6 +137,7 @@ height:220px;
 section {
     margin-top: 20px;
 }
+
 /*Menu´s styles*/
 
  
@@ -170,18 +220,21 @@ max-height:400px;
 
 }
 
-.goodPractices-container {
-    border: 1px solid black;
-    height: 400px;
+.goodPractices-container {    
+    height: auto;
     text-align: center;
     padding: 0 200px 0 200px;
 }
 
-.goodPractices-text {
-    color:royalblue;
-    text-align:left;
-    font-size: 21px;
-}
+    .goodPractices-container h3 {
+        color: deeppink;
+    }
+
+    .goodPractices-text {
+        color: royalblue;
+        text-align: left;
+        font-size: 21px;
+    }
 
 .videoGoodPractices-container {
     height: 400px;
@@ -259,8 +312,8 @@ text-align:center;
 }
 
 .map-container {
-    margin-top:50px;
-    height: auto;
+    margin-top:50px;    
+    max-height:500px;
     position: relative;
     overflow:hidden;
     padding-top:0;    
@@ -273,12 +326,7 @@ text-align:center;
 }
 
 .carousel-container {
-    height: 250px;
-    border: 1px solid black;
-    display: grid;
-    justify-content: center !important;    
-    align-content: center;
-    
+   height: 250px;           
 }
 /*Main page*/
 
@@ -320,4 +368,157 @@ border:1px solid red;
     border: 1px solid black;
     margin-top:50px;
 }
-    /*Inicia vista por practica*/
+
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide img {
+width:100%;
+height:250px;
+}
+
+
+
+.dudas-banner__container {
+    background-color:#455DA1;
+    height:150px;
+    font-size:30px;
+    color:white;
+    padding:5px 0 0 5vh;
+    letter-spacing:4px;
+    position:relative;
+}
+
+.fa-headset {
+position:absolute;
+right:10%;
+top: 25%;
+font-size:55px !important;
+}
+
+.footer-header {
+    height:150px;
+    display:flex;   
+    width:100%;
+
+}
+
+
+.liIzq {
+    padding-left: 0%;
+    margin-right: 0%;
+    margin-top: 8%;
+    line-height:17px;
+}
+
+.linkExt a{
+    color: #7a7a7a;
+}
+
+.liIzq li {
+    display: inline;
+    color: #7a7a7a;
+    font-size: 30px;
+    margin-left: 1%;
+    font-family: poppins;
+    font-weight: 300;
+}
+.liDerSep {
+    border-left: 1px #7a7a7a solid;
+    height: 220px;
+    width: 2px;
+    padding-right: 6%;
+    margin-top: 4%;
+    margin-bottom: 20px;
+}
+
+
+
+div.col-md-8.liIzq > div:nth-child(1) > li > a {
+    font-size: 27px;
+}
+
+.row.pieCnvl a {
+    color: #7a7a7a;
+    font-size: .6em;
+    font-weight: 300;
+}
+
+.row::before, .row::after {
+    display: table;
+    content: " ";
+}
+
+.row::before, .row::after {
+    display: table;
+}
+.footer-bodi {
+    font-family: poppins;
+}
+
+.row::after {
+    clear: both;
+}
+
+.row::before, .row::after {
+    display: table;
+    content: " ";
+}
+
+div.col-md-8.liIzq > div:nth-child(2) > li > a {
+    font-size: 27px;
+}
+
+.row.pieCnvl a {
+    color: #7a7a7a;
+    font-size: .6em;
+    font-weight: 300;
+}
+
+ div.col-md-3.liDer > li.aDer {
+    margin-bottom: 15px;
+    color: #7a7a7a;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+li.aDer a {
+    color: #7a7a7a;
+}
+
+.row.pieCnvl a {
+    color: #7a7a7a;
+    font-size: .6em;
+    font-weight: 300;
+}
+
+.col-md-3.liDer {
+    list-style: none;
+}
+
+.horizontal-line {
+    border-top: 1px #7a7a7a solid;
+    height: 1px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.footer-body {
+    position:relative;
+}
+
+    .footer-body .image-container {
+        position: absolute;
+        bottom: 10px;
+        left: 1px;
+        margin-left: 5px;
+    }
+
+    .footer-body .image-container img {
+    scale:1.2;
+    margin-left:10px;
+    }
+        /*Inicia vista por practica*/
