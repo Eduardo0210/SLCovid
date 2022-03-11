@@ -4,35 +4,109 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section Styles {
+    @Styles.Render("~/PacticeView/css")
+}
 <div class="container">
     <section>
-        <div class="pvPrincipalImage-container">
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="buenasPracticas--Logo" src="~/assets/imgs/Logo_Buenas_Practicas_horizontal.png" />
+            </div>
             <div class="pvPrincipalImage-title">
                 <h2>Título de la buena práctica</h2>
             </div>
-            <div class="pvPrincipalImage-image">
-                ESPACIO PARA LA IMAGEN PRINCIPAL
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="thumbnail">
+                        <img src="~/assets/imgs/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg" />
+                        <div class="caption">
+                            <h4>Subtitulo de la buena practica</h4>
+                            <p> Tempor zzril et at sanctus ut gubergren est dolore sit takimata voluptua dolor dolores amet ut dolor duo duis et at molestie lorem amet at facilisis lorem lorem duo in dolor dolore magna no est dolore et diam consequat eros veniam tincidunt dolor dolor sit in eos kasd blandit autem</p>
+                            <div class="row">
+                                <div class="col-sm-12 text-right">
+                                    <img src="~/assets/imgs/facebook.png" />
+                                    <img src="~/assets/imgs/whatsap.png" />
+                                    <img src="~/assets/imgs/gmail.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="pvSocialMedia-container">
-            ESPACIO PARA DESPLIEGUE DE REDES SOCIALES
+        <div class="row ">
+            <div class="title-main_elements">
+                <h2>Elementos claves</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="~/assets/imgs/índice.jpg" />
+                </div>
+                <div class="col-sm-8 felx-mode">
+                    <div>
+                        <button class="button_mainElement" >¿Por qué es una buena practica?</button>
+                        <button class="button_mainElement ml" data-toggle="popover" title="ODS al que contribuye" data-content="">ODS al que contribuye</button>
+
+                    </div>
+                    <div>
+                        <button class="button_mainElement">Periodo de implementación</button>
+                        <button class="button_mainElement ml">Contacto</button>
+                    </div>
+
+                    <div>
+                        <button class="button_mainElement">Ubicación/Estado</button>
+                        <button class="button_mainElement ml">Recursos Adicionales</button>
+                    </div>
+
+                    
+                    <div id="customdiv" style="display: none">
+                        <img class="popoverImage" src="~/assets/imgs/ODS/1-02.jpg" />
+                        <img class="popoverImage" src="~/assets/imgs/ODS/1-03.jpg" />
+                        <img class="popoverImage" src="~/assets/imgs/ODS/1-04.jpg" />
+                              
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    
+                </div>
+            </div>            
         </div>
     </section>
 
-    <div class="pvDescription-container">
-        Espacio para la descripción de la practica
-    </div>
-
     <div class="pvMainElement-container">
+        <h3>Explora nuevas practicas</h3>
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="#" class="thumbnail">
+                    <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" class="thumbnail">
+                    <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="#" class="thumbnail">
+                    <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
+                </a>
+            </div>
+            
+        </div>
 
-        ELEMENTOS CLAVES
-    </div>
-
-    <div class="pvMainElement-container">
-
-       Espacio para explora otras buenas prácticas
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover({
+                html: true,
+                content: function () {
+            return $('#customdiv').html();
+        }  });
+        });
+</script>
 

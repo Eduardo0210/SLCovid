@@ -1,0 +1,115 @@
+﻿:root {
+    --blue: #266FB8;
+    --pink: #EC3B48;
+}
+
+body {
+    background-image: url('../../assets/imgs/Fondo-2.jpeg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+.buenasPracticas--Logo {
+ float:right;
+width:50%;
+}
+
+.caption img{
+    width:30px !important;
+    height:30px;   
+    margin-right:15px;
+}
+
+.pvSocialMedia-container .title-main_elements{
+    text-align:center;
+    width: 100%;
+}
+
+.title-main_elements h2 {
+    font-family: 'Poppins', sans-serif;    
+    font-size: 27px;
+    padding: 0px;
+    line-height: 30px !important;
+    color: #010101;
+    font-weight: 800;
+    margin-bottom:30px;
+}
+
+.felx-mode {
+    display: grid;
+    column-count: 2;
+}
+    .felx-mode div {
+    width:100% !important;
+    margin-left:10%;
+    }
+
+    .button_mainElement {
+        background: var(--blue);
+        color: white;
+        padding: 3px;
+        width: 35%;
+        height:45px;
+        margin-top:10px;
+        margin-left:15px;
+    }
+
+.ml {
+    margin-left:15%;
+}
+
+.pvMainElement-container .row div {
+    margin-top:50px !important;
+}
+
+.pvMainElement-container {
+    padding: 15px;
+    background: linear-gradient(0.25turn,var(--pink), #e5e5e5);
+    text-align: right !important;
+    border-radius:6px;
+}
+
+    .pvMainElement-container h3 {
+        color: var(--pink);
+        
+    }
+
+.caption h4 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px 0px 4px 0px;
+    font-size: 27px;
+    padding: 0px;
+    line-height: 30px !important;
+    color:black;
+}
+
+.pvPrincipalImage-title h2 {
+    padding-top: 20px;
+    color: var(--pink);
+    font-size: 45px;
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding-bottom: 55px;
+    background-size: 38%;
+}
+
+
+.caption p {
+    font-weight: lighter;
+    font-size: 16.5px;
+    line-height: 1.1em;
+    font-family: 'Poppins', sans-serif;
+    color: #010101;
+}
+
+    .caption h4:hover {
+        color: var(--pink);
+    }
+
+.popoverImage{
+width:50px;
+height:50px;
+}

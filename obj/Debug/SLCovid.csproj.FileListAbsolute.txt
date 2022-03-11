@@ -56,8 +56,8 @@ C:\Users\eduiw\source\repos\SLCovid\bin\es\System.Web.Razor.resources.dll
 C:\Users\eduiw\source\repos\SLCovid\bin\es\System.Web.WebPages.resources.dll
 C:\Users\eduiw\source\repos\SLCovid\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\eduiw\source\repos\SLCovid\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\eduiw\source\repos\SLCovid\obj\Debug\SLCovid.csprojAssemblyReference.cache
 C:\Users\eduiw\source\repos\SLCovid\obj\Debug\SLCovid.csproj.CoreCompileInputs.cache
 C:\Users\eduiw\source\repos\SLCovid\obj\Debug\SLCovid.csproj.CopyComplete
 C:\Users\eduiw\source\repos\SLCovid\obj\Debug\SLCovid.dll
 C:\Users\eduiw\source\repos\SLCovid\obj\Debug\SLCovid.pdb
+C:\Users\eduiw\source\repos\SLCovid\obj\Debug\SLCovid.csprojAssemblyReference.cache
