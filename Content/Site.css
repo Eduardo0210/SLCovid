@@ -92,12 +92,16 @@ textarea {
     }*/
 
 
+.logo-horizontal img {
+    width:100%;
+}
+
 
 
 .socialMedia-container {
-   display:grid;
-   grid-row:2;
-   margin-top: 15px;
+    display: grid;
+    grid-row: 2;
+    margin-top: 15px;
 }
 
     .socialMedia-container div img{    
@@ -187,27 +191,30 @@ margin-left:50px;
 
 
 
-.title-container {
-    display:grid;
-    align-content:center !important;
-    width:100%;
-    position:relative;
-}
     .title-container i {
     font-size:35px;
-    margin-top: 10px;
+    
 
     }
 
-    .title-container img {
-        height: 100px;
-        right: 10px;
-        position: absolute;
+    .title-container p {    
+      position:absolute;
+      transform:translate(-50%,110%);      
+      left:50%;
+      
     }
+
+.blue-header-tittle {
+    background-color: var(--blue);
+    color:white !important
+        ;
+    padding:5px;
+    margin-bottom:20px;
+}
 
 .dataMun {
-color:#8098BF;
-font-weight:bold;
+    color: #8098BF;
+    font-weight: bold;
 }
 
 .main-title {
