@@ -1,152 +1,156 @@
-﻿@{
+﻿
+@model SLCovid.Models.Practices
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
-    <div style="" class="header-presentation__container">
-        <div class="green-presentation">
-        </div>
-        <div class="blue-presentation">
-            <img class="logo-rigth-bottom" src="~/assets/imgs/ODS-GlobalGoals-IconGrid-Wheel_Wheel.png" />
-            <div class="text-presentation">
-                <p class="text-center-title"><span class="green">REPOSITORIO DIGITAL</span><br />DE BUENAS PRÁCTICAS</p>
+    @*<div style="" class="header-presentation__container">
+            <div class="green-presentation">
             </div>
-        </div>
-    </div>
-
-    <div class="dataMun-welcome">
-        <p class="dataMun">¡DataMun te da la bienvenida!</p>
-    </div>
-    <div class="title-container">
-        <p><i class="fa fa-house"></i></p>        
-    </div>
-
-    <section>
-        <div class="main-content">
-            <div class="main-content__menu">
-                <ul class="m-c__menu__list">
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                    <li class="menu-list__item"><a href="#">Example practice.</a></li>
-                </ul>
-            </div>
-            <div class="main-content__image">
-                
-                <img src="~/assets/imgs/Banner de inicio.jpg" />
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="recognizedPractices-container mt-100">
-            <div class="recognizedPractices_title">
-                <h3 class="title-recognizedPractices">Prácticas Reconocidas</h3>
-            </div>           
-
-             
-                <div class="row">
-                    <div class=" col-sm-3">
-                        <select>
-                            <option>Categoría</option>
-                        </select>
-                    </div>
-                    <div class="col-sm-3">
-                        <select>
-                            <option>Año</option>
-                        </select>
-                        </div>
-                        <div class="col-sm-3">
-                            <select>
-                                <option>Sector</option>
-                            </select>
-
-                            </div>
-                            <div class="col-sm-3">
-                                <select >
-                                    <option>Estado</option>
-                                    <option value="1">Aguascalientes</option>
-                                    <option value="2"> Baja California</option>
-                                    <option value="3"> Baja California Sur</option>
-                                    <option value="4"> Campeche</option>
-                                    <option value="5"> Chiapas</option>
-                                    <option value="6"> Chihuahua</option>
-                                    <option value="32"> Ciudad de México</option>
-                                    <option value="7"> Coahuila</option>
-                                    <option value="8"> Colima</option>
-                                    <option value="9"> Durango</option>
-                                    <option value="10"> Estado de México</option>
-                                    <option value="11"> Guanajuato</option>
-                                    <option value="12"> Guerrero</option>
-                                    <option value="13"> Hidalgo</option>
-                                    <option value="14"> Jalisco</option>
-                                    <option value="15"> Michoacán</option>
-                                    <option value="16"> Morelos</option>
-                                    <option value="17"> Nayarit</option>
-                                    <option value="18"> Nuevo León</option>
-                                    <option value="19"> Oaxaca</option>
-                                    <option value="20"> Puebla</option>
-                                    <option value="21"> Querétaro</option>
-                                    <option value="22"> Quintana Roo</option>
-                                    <option value="23"> San Luis Potosí</option>
-                                    <option value="24"> Sinaloa</option>
-                                    <option value="25"> Sonora</option>
-                                    <option value="26"> Tabasco</option>
-                                    <option value="27"> Tamaulipas</option>
-                                    <option value="28"> Tlaxcala</option>
-                                    <option value="29"> Veracruz</option>
-                                    <option value="30"> Yucatán</option>
-                                    <option value="31"> Zacatecas</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>                        
-    </section>
-    <div class="map-container">
-        <div id="svgMapa"></div>
-    </div>
-
-    <section>
-        <div class="row">
-            <div class="goodPractices-container col-sm-6">
-                <h3>¿Qué es el Repositorio de Buenas prácticas?</h3>
-                <div class="goodPractices-text">
-                    <p>
-                        En este repositorio podrás encontrar información sobre las mejores prácticas a nivel
-                        nacional para afrontar la crisis generada por la COVID-19, así como, en monitoreo y
-                        evaluación de la política pública/social.  ¡inspírate y aplícalas!
-                    </p>
-                    <p>
-                        Se considerarán "buenas prácticas" aquellas estrategias, programas o acciones diseñadas
-                        e implementadas con base en evidencia para minimizar las afectaciones económicas y a
-                        los derechos sociales derivadas de la pandemia por la COVID-19.
-                    </p>
-
-                    <p>
-                        Si quieres conocer más información, te invitamos a ver el siguiente video.
-                    </p>
+            <div class="blue-presentation">
+                <img class="logo-rigth-bottom" src="~/assets/imgs/ODS-GlobalGoals-IconGrid-Wheel_Wheel.png" />
+                <div class="text-presentation">
+                    <p class="text-center-title"><span class="green">REPOSITORIO DIGITAL</span><br />DE BUENAS PRÁCTICAS</p>
                 </div>
             </div>
-            <div class="col-sm-6">
+        </div>*@
+    <div class="row justify-content-center">
+        <div class="col-md-1">
+            <div class="title-container text-left">
+                @*<p><i class="fa fa-house"></i></p>*@
+            </div>
+        </div>
 
-                <iframe style="width:100%; height:390px;" src="https://www.youtube.com/embed/LAKfxLsnEyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="col-md-11 logo-horizontal">
+            <img src="~/assets/imgs/Logo_Buenas_Practicas_horizontal.png" />
+        </div>
+    </div>
+    <section id="WhatIs">
+        <div class="row">
+            <div style="font-size:20px !important" class="col-md-12 goodPractices-text blue-header-tittle">
+                Inspirate con estas prácticas
+            </div>
+        </div>
+        <div class="row ">
+            <div class="goodPractices-container col-sm-6">
+                <div class="center-content">
+                    <h3>¿Qué es el Repositorio de Buenas prácticas?</h3>
+                    <div class="goodPractices-text" style="text-align:justify">
+                        <p style="text-align:justify">
+                            En este repositorio podrás encontrar información sobre las mejores prácticas a nivel
+                            nacional para afrontar la crisis generada por la COVID-19, así como, en monitoreo y
+                            evaluación de la política pública/social.  ¡inspírate y aplícalas!
+                        </p>
+                        <p style="text-align:justify">
+                            Se considerarán "buenas prácticas" aquellas estrategias, programas o acciones diseñadas
+                            e implementadas con base en evidencia para minimizar las afectaciones económicas y a
+                            los derechos sociales derivadas de la pandemia por la COVID-19.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img style="width:100%; height:390px" src="~/assets/imgs/Banner-Chico.jpeg" />
             </div>
         </div>
     </section>
+    <section id="mapaPracticas">
+        <div style="background-color: #E0DED5;" class="recognizedPractices-container mt-5">
+            <div class="recognizedPractices_title">
+                <h3 class="title-recognizedPractices">Buscador de buenas prácticas</h3>
+                <p class="goodPractices-text">¡Filtra y selecciona en el mapa las prácticas que quieres conocer!</p>
+            </div>
+            <div class="row mt-50">
+                <div class=" col-sm-3">
+                    <div class="row mt-5" style="margin-left:15px">
+                        <div class=" col-sm-12">
+                            <select onchange="filter()" id="SelCategoria">
+                                <option value="0">Categoría</option>
+                                <option value="1">Intervenciones públicas para atender las afectaciones por la COVID-19</option>
+                                <option value="2">Estrategias de monitoreo y evaluación</option>
+                                <option value="3">Rendición de cuentas, transparencia y acceso a la información</option>
+                            </select>
+                        </div>
+                        <div class=" col-sm-12">
+                            <select onchange="filter()" id="SelAnio">
+                                <option value="">Año</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                            </select>
+                        </div>
+                        <div class=" col-sm-12">
+                            <select onchange="filter()" id="SelSector">
+                                <option value="">Sector</option>
+                                <option value="Entidad Federativa">Entidad Federativa</option>
+                                <option value="OSC">OSC</option>
 
-  
+                            </select>
+                        </div>
+                        <div class=" col-sm-12">
+                            <select onchange="filter()" id="SelEstado">
+                                <option value="">Estado</option>
+                                <option value="Aguascalientes">Aguascalientes</option>
+                                <option value="Baja California">Baja California</option>
+                                <option value="Baja California Sur">Baja California Sur</option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Ciudad de México">Ciudad de México</option>
+                                <option value="Coahuila">Coahuila</option>
+                                <option value="Colima">Colima</option>
+                                <option value="Durango">Durango</option>
+                                <option value="Estado de México">Estado de México</option>
+                                <option value="Guanajuato">Guanajuato</option>
+                                <option value="Guerrero">Guerrero</option>
+                                <option value="Hidalgo">Hidalgo</option>
+                                <option value="Jalisco">Jalisco</option>
+                                <option value="Michoacán">Michoacán</option>
+                                <option value="Morelos">Morelos</option>
+                                <option value="Nayarit">Nayarit</option>
+                                <option value="Nuevo León">Nuevo León</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Puebla">Puebla</option>
+                                <option value="Querétaro">Querétaro</option>
+                                <option value="Quintana Roo">Quintana Roo</option>
+                                <option value="San Luis Potosí">San Luis Potosí</option>
+                                <option value="Sinaloa">Sinaloa</option>
+                                <option value="Sonora">Sonora</option>
+                                <option value="Tabasco">Tabasco</option>
+                                <option value="Tamaulipas">Tamaulipas</option>
+                                <option value="Tlaxcala">Tlaxcala</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Yucatán">Yucatán</option>
+                                <option value="Zacatecas">Zacatecas</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-sm-1">                    
+                </div>
+                <div class=" col-sm-6">
+                    <div id="svgMapa"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row banner-Mejorar mt-5" style="position:relative;">
+        <div class="col-sm-10">
+            <img style="width:100%;" src="~/assets/imgs/WhatsApp Image 2022-02-25 at 5.53.08 PM.jpeg" />
+        </div>
+    </div>
+    @*<section>
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                    <iframe style="width:100%; height:390px;" src="https://www.youtube.com/embed/LAKfxLsnEyQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>*@
 
     <section>
-        <div class="carousel-container mt-5">
+        <div class="carousel-container mt-5" style="background-color: #E0DED5; padding:15px 15px 15px 15px;">
 
             <div class="mapMain">
                 <!-- Slider main container -->
@@ -154,30 +158,18 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide">
+                        @foreach (SLCovid.Models.PracticaListas practica in Model.listasPracticas)
+                        {
 
-                            <img src="~/assets/imgs/tecnologia-.jpg" />
-                        </div>
-                        <div class="swiper-slide">
 
-                            <img src="~/assets/imgs/produccion_agricola.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
-
-                        </div>
-                        <div class="swiper-slide">
-
-                            <img src="~/assets/imgs/tecnologia-.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-
-                            <img src="~/assets/imgs/produccion_agricola.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
-
-                        </div>
+                            <div class="swiper-slide" onclick="cambiarPagina(@practica.kiidPractica)">
+                                <p class="sliderText">@practica.nombre</p>
+                                <div  class="swiper-dark-background">
+                                </div>
+                                <img src="~/assets/imgs/tecnologia-.jpg" />
+                            </div>
+                        }
+                        <!--AQUI HAY QUE METER UN FOR PARA QUE SE GENEREN TODAS LAS BUENAS PRACTICAS QUE HAY EN EL SISTEMA-->
                         ...
                     </div>
                     <!-- If we need pagination -->
@@ -195,35 +187,53 @@
 
         </div>
     </section>
-    <img style="width:100%;" class="mt-100" src="~/assets/imgs/WhatsApp Image 2022-02-25 at 5.53.08 PM.jpeg" />
-    <section class="mt-100">
-        <div class="dudas-banner__container">
-            <p> <b>¿Tienes dudas?</b><br />Escríbenos a: entidadesfederativas@@coneval.org.mx</p>
-           <p><i class="fa-solid fa-headset"></i></p>
+
+    <section id="contacto" class="mt-100">
+        <div class="dudas-banner__container text-center">
+            <p> ¿Te gustaría replicar alguna de estas prácticas? <br /> Escríbenos a: entidadesfederativas@@coneval.org.mx</p>
+            <p><i class="fa-solid fa-envelope"></i></p>
         </div>
-        
+
     </section>
 </div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="tituloModal"></h4>
+            </div>
+            <div class="modal-body">
+                <ul id="listaModal">
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/@Html.Raw("@")splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 <script>
-
+    var jsonActual;
     //Función encargada de inicializar el mapa
 window.inicializarMapa = function inicializarMapa(svgObj){
-     
+
      //Cargamos los datos de ventas por región
      //desde nuestro archivo JSON
      jQuery.getJSON('', function(data, textStatus, jqXHR){
        infoMapa.datos = data;
      });
-    
+
      //Guardamos los colores originales de cada región, los
      //usaremos luego para "desactivar" la región activa
      jQuery('.Region').each(function(index, element){
        infoMapa.colores[element.id] = jQuery(element).css('fill');
 	 });
-	 
+
 	 jQuery('#estado').on('change', function(e){
        var datosRegion,
            RegionNueva;
@@ -237,22 +247,22 @@ window.inicializarMapa = function inicializarMapa(svgObj){
            'fill': infoMapa.colores[infoMapa.regionActiva],
            'stroke-width': 0.5
          });
-    
+
          //Caso especial de #RegionInsular: es un path
          //compuesto, y debemos afectar a los subpaths también
-         jQuery('#'+infoMapa.regionActiva).find('path').css({
-           'fill': infoMapa.colores[infoMapa.regionActiva],
-           'stroke-width': 0.5
-         });
-    
+        // jQuery('#'+infoMapa.regionActiva).find('path').css({
+        //   'fill': infoMapa.colores[infoMapa.regionActiva],
+    Url   //Url  'stroke-width': 0.5
+        // });
+
        };
-    
+
        RegionNueva = jQuery('#estado-'+this.value);
-    
+
        //guardamos el nombre de la región activa:
 	   infoMapa.regionActiva = RegionNueva.attr('id');
-	   
-    
+
+
        //Resaltamos al zona seleccionada (y los subpaths):
        RegionNueva.css({
          'fill': 'red',
@@ -261,48 +271,42 @@ window.inicializarMapa = function inicializarMapa(svgObj){
          'fill': 'red',
          'stroke-width': 1
        });
-    
+
        //Y mostramos los datos en el cuadro de detalle:
        datosRegion = infoMapa.datos[infoMapa.regionActiva];
-    
-       
+
+
        pintarCampos(principal,RegionNueva.attr('name').toString())
-    
-       //y no queremos que #divDatos se entere de este clic: 
+
+       //y no queremos que #divDatos se Urlntere de este clic:
        e.stopPropagation();
      });
-   
-    
+
+
     jQuery('.Region').on('click', function(e){
        var datosRegion,
            RegionNueva;
 
-	
-	
-            
        //Reestablece los colores de la región anterior
        if(infoMapa.regionActiva!==''){
          jQuery('#'+infoMapa.regionActiva).css({
            'fill': infoMapa.colores[infoMapa.regionActiva],
            'stroke-width': 0.5
          });
-    
+
          //Caso especial de #RegionInsular: es un path
          //compuesto, y debemos afectar a los subpaths también
-         jQuery('#'+infoMapa.regionActiva).find('path').css({
-           'fill': infoMapa.colores[infoMapa.regionActiva],
-           'stroke-width': 0.5
-         });
-    
+
+
        };
-    
+
        RegionNueva = jQuery(this);
 	   var name = RegionNueva.attr('name');
 
-	   $("#estado option:contains(" + name  + ")").attr('selected', 'selected'); 
+	   $("#estado option:contains(" + name  + ")").attr('selected', 'selected');
        //guardamos el nombre de la región activa:
        infoMapa.regionActiva = RegionNueva.attr('id');
-    
+
        //Resaltamos al zona seleccionada (y los subpaths):
        RegionNueva.css({
          'fill': 'red',
@@ -311,25 +315,25 @@ window.inicializarMapa = function inicializarMapa(svgObj){
          'fill': 'red',
          'stroke-width': 1
        });
-    
+
        //Y mostramos los datos en el cuadro de detalle:
        datosRegion = infoMapa.datos[infoMapa.regionActiva];
-    
+
 	   pintarCampos(principal,RegionNueva.attr('name').toString())
-       
-	   
-       //y no queremos que #divDatos se entere de este clic: 
+
+
+       //y no queremos que #divDatos se entere de este clic:
        e.stopPropagation();
     });
 
-    document.getElementById("CHI").style.fill = "#1D9348";
-
     };
-    
+
+    function cambiarPagina(id) {
+
+        location.href = "/Home/PracticeView?kiidPractica="+id;
+    }
 
     $(document).ready(function () {
-
-        
 
         var swiper = new Swiper(".swiper", {
             slidesPerView: 3,
@@ -345,7 +349,7 @@ window.inicializarMapa = function inicializarMapa(svgObj){
         });
 
 
-        //Carga el mapa y lo inicializa 
+        //Carga el mapa y lo inicializa
         $('#svgMapa').svg({
             'loadURL': './assets/imgs/Mexico_21409A (1).svg',
             'onLoad': window.inicializarMapa
@@ -353,32 +357,385 @@ window.inicializarMapa = function inicializarMapa(svgObj){
 
         //Si un clic en el mapa no viene de ninguna de las 9
         //regiones se borra el detalle y quita el resaltado.
-        $('#svgMapa').on('click', 'path', function (e) {
+        //$('#svgMapa').on('click', 'path', function (e) {
 
-            if (infoMapa.regionActiva == '') {
-                return;
-            }
+        //    if (infoMapa.regionActiva == '') {
+        //        return;
+        //    }
 
-            //Quita el resaltado de la región activa
-            $('#' + infoMapa.regionActiva).css({
-                'fill': infoMapa.colores[infoMapa.regionActiva],
-                'stroke-width': 0.5
-            }).find('path').css({
-                'fill': infoMapa.colores[infoMapa.regionActiva],
-                'stroke-width': 0.5
-            });
+        //    //Quita el resaltado de la región activa
+        //    $('#' + infoMapa.regionActiva).css({
+        //        'fill': infoMapa.colores[infoMapa.regionActiva],
+        //        'stroke-width': 0.5
+        //    }).find('path').css({
+        //        'fill': infoMapa.colores[infoMapa.regionActiva],
+        //        'stroke-width': 0.5
+        //    });
 
-            //Y borra el cuadro de detalle
+        //    //Y borra el cuadro de detalle
 
 
-            infoMapa.regionActiva = '';
-
-          
-
-        });
+        //    infoMapa.regionActiva = '';
+        //});
     });
 
+    function filter() {
 
-    
+        var categoria = document.getElementById("SelCategoria").value;
+        var sector = document.getElementById("SelSector").value;
+        var anio = document.getElementById("SelAnio").value;
+        var estado = document.getElementById("SelEstado").value;
+
+        data = { categoria: categoria,sector : sector, anio : anio,estado : estado };
+
+        $.ajax({
+            url: "@Url.Action("SearchPractice", "Home")",
+            data: data,
+            type: "post",
+
+        }).done(async function (data) {
+            document.getElementById("listaModal").innerHTML = "";
+            var json = JSON.parse(data);
+            console.log(json);
+            LimpiarMapa();
+            for (var i = 0; i < json.length; i++) {
+
+                try {
+                    var estado = json[i].estado;
+                    json[i].nomeclatura = await obtenerIDMapa(json[i].estado);
+                    var idEstado = await obtenerIDMapa(json[i].estado);
+                    document.getElementById(idEstado).style.fill = "var(--pink)";
+                    document.getElementById(idEstado).style.cursor = "pointer";
+                    //document.getElementById("listaModal").innerHTML = document.getElementById("listaModal").innerHTML + "<li><a href='Home/PracticeView?kiidPractica="+json[i].kiidPractica+"'>" + json[i].nombre + "</a></li>";
+                    document.getElementById(idEstado).addEventListener("click", function () { mostrarModal(this) }, false);
+                } catch (e) {
+
+                }
+
+            }
+            jsonActual = json;
+        })
+
+    }
+
+    function mostrarModal(elemento) {
+        document.getElementById("listaModal").innerHTML = "";
+        for (var i = 0; i < jsonActual.length; i++) {
+            if (jsonActual[i].nomeclatura == elemento.id) {
+                document.getElementById("listaModal").innerHTML = document.getElementById("listaModal").innerHTML + "<li><a href='Home/PracticeView?kiidPractica=" + jsonActual[i].kiidPractica + "'>" + jsonActual[i].nombre + "</a></li>";
+            }
+        }
+        document.getElementById("tituloModal").innerText = "Buenas prácticas";
+        $('#myModal').modal('show');
+    }
+
+    function LimpiarMapa() {
+        for (var i = 0; i < 32; i++) {
+            var response = "";
+            switch (i) {
+                case 0:
+                    response = "AGS";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+
+                    break;
+                case 1:
+                    response = "BCN";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 2:
+                    response = "BCS";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 3:
+                    response = "CAM";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 4:
+                    response = "CHP";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 5:
+                    response = "CHI";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 6:
+                    response = "CMX";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 7:
+                    response = "COA";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 8:
+                    response = "COL";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 9:
+                    response = "DUR";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 10:
+                    response = "MEX";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 11:
+                    response = "GTO";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 12:
+                    response = "GRO";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 13:
+                    response = "HGO";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 14:
+                    response = "JAL";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 15:
+                    response = "MIC";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 16:
+                    response = "MOR";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 17:
+                    response = "NAY";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 18:
+                    response = "NLE";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 19:
+                    response = "OAX";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 20:
+                    response = "PUE";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 21:
+                    response = "QRO";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 22:
+                    response = "ROO";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 23:
+                    response = "SLP";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 24:
+                    response = "SIN";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 25:
+                    response = "SON";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 26:
+                    response = "TAB";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 27:
+                    response = "TAM";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 28:
+                    response = "TLA"
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 29:
+                    response = "VER";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+                case 30:
+                    response = "YUC";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click",mostrarModal);
+                    break;
+                case 31:
+                    response = "ZAC";
+                    document.getElementById(response).style.fill = "var(--blue)";
+                    document.getElementById(response).style.cursor = "auto";
+                    document.getElementById(response).removeEventListener("click", mostrarModal);
+                    break;
+
+            }
+        }
+    }
+
+    async function obtenerIDMapa(estado) {
+        var response = "";
+        switch (estado) {
+            case "Aguascalientes":
+                response = "AGS";
+                break;
+            case "Baja California":
+                response = "BCN";
+                break;
+            case "Baja California Sur":
+                response = "BCS";
+                break;
+            case "Campeche":
+                response = "CAM";
+                break;
+            case "Chiapas":
+                response = "CHP";
+                break;
+            case "Chihuahua":
+                response = "CHI";
+                break;
+            case "Ciudad de México":
+                response = "CMX";
+                break;
+            case "Coahuila":
+                response = "COA";
+                break;
+            case "Colima":
+                response = "COL";
+                break;
+            case "Durango":
+                response = "DUR";
+                break;
+            case "Estado de México":
+                response = "MEX";
+                break;
+            case "Guanajuato":
+                response = "GTO";
+                break;
+            case "Guerrero":
+                response = "GRO";
+                break;
+            case "Hidalgo":
+                response = "HGO";
+                break;
+            case "Jalisco":
+                response = "JAL";
+                break;
+            case "Michoacán":
+                response = "MIC";
+                break;
+            case "Morelos":
+                response = "MOR";
+                break;
+            case "Nayarit":
+                response = "NAY";
+                break;
+            case "Nuevo León":
+                response = "NLE";
+                break;
+            case "Oaxaca":
+                response = "OAX";
+                break;
+            case "Puebla":
+                response = "PUE";
+                break;
+            case "Querétaro":
+                response = "QRO";
+                break;
+            case "Quintana Roo":
+                response = "ROO";
+                break;
+            case "San Luis Potosí":
+                response = "SLP";
+                break;
+            case "Sinaloa":
+                response = "SIN";
+                break;
+            case "Sonora":
+                response = "SON";
+                break;
+            case "Tabasco":
+                response = "TAB";
+                break;
+            case "Tamaulipas":
+                response = "TAM";
+                break;
+            case "Tlaxcala":
+                response = "TLA"
+                break;
+            case "Veracruz":
+                response = "VER";
+                break;
+            case "Yucatán":
+                response = "YUC";
+                break;
+            case "Zacatecas":
+                response = "ZAC";
+                break;
+
+        }
+
+        return response;
+    }
+
+
 
 </script>

@@ -24,10 +24,10 @@ html {
 
 body {
     padding-bottom: 20px;
-    font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  
+    font: 13px/1.231 arial,helvetica,clean,sans-serif; 
     
 }
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -49,10 +49,26 @@ textarea {
 }
 
 /*General propouse*/
-
+.ml-20 {
+    margin-left: 20px !important;
+}
+.ml-40 {
+    margin-left: 40px !important;
+}
+.ml-50{
+    margin-left:50px !important;
+}
 .mt-5 {
  margin-top:50px !important;
 }
+.mt-6 {
+    margin-top: 60px !important;
+}
+
+.mt-70 {
+    margin-top: 70px !important;
+}
+
 
 .mt-100 {
     margin-top: 100px !important;
@@ -93,7 +109,8 @@ textarea {
 
 
 .logo-horizontal img {
-    width:100%;
+    width: 100%;
+    height: calc(width / 4);
 }
 
 
@@ -200,15 +217,17 @@ margin-left:50px;
     .title-container p {    
       position:absolute;
       transform:translate(-50%,110%);      
-      left:50%;
+      left:10%;
       
     }
 
 .blue-header-tittle {
     background-color: var(--blue);
-    color:white !important
-        ;
+    color:white !important;
     padding:5px;
+    font-weight:bold !important;
+    font-size:30px !important;
+    padding:10px 20px 10px 20px;
     margin-bottom:20px;
 }
 
@@ -262,14 +281,16 @@ width:100%;
 max-height:400px;
 }
 
+
 .title-recognizedPractices {
     font-family: 'Poppins', sans-serif;
     margin: 0px 0px 4px 0px;
-    font-size: 27px;
+    font-size: 22px;
     padding: 0px;
     line-height: 35px !important;
     color: var(--pink);
     font-weight: 800;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
@@ -285,7 +306,7 @@ max-height:400px;
     .goodPractices-container h3 {
         font-family: 'Poppins', sans-serif;
         margin: 0px 0px 4px 0px;
-        font-size: 27px;
+        font-size: 22px;
         padding: 0px;
         line-height: 30px !important;
         color: var(--pink);
@@ -298,8 +319,8 @@ max-height:400px;
 
 .goodPractices-text {
     font-weight: lighter;
-    font-size: 18.5px;
-    line-height: 1.1em;
+    font-size: 16.5px !important;
+    line-height: 1.1em;  
     margin: 0px;
     margin-left: 0px;
     margin-left: 7px;
@@ -339,45 +360,54 @@ text-align:center;
     width:100%;*/
 }
 
+.banner-Mejorar div{
 
 
-    .grid-select__container .left-container {
-        text-align: center;
-    }
+    transform:translateX(-50%);
+    
+    left:50%;
+    
+}
+
+.grid-select__container .left-container {
+    text-align: center;
+}
 
 
     select {
         /* styling */
         background-color: white;
         border: thin solid blue;
-        border-radius: 4px;
+        
         display: inline-block;
         font: inherit;
         line-height: 1.5em;
         padding: 0.5em 3.5em 0.5em 1em;
         /* reset */
-
+/*
         margin: 0;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         -webkit-appearance: none;
-        -moz-appearance: none;
+        -moz-appearance: none;*/
     }
 .row div select {
     
-    background-color: var(--pink);
-    width:160px;
+    background-color: none;
+    border-bottom: 2px solid var(--pink) !important;
+    width:100%;
     border: none;
     height: 50px;
-    color: white;
+    color: var(--pink);
     font-weight: 600;
     padding-left: 20px;
     font-size: 15px;
     margin-left: 5px;
-    background-image: url('../assets/imgs/Arrow.png');    
+    margin-top: 15px;
+/*    background-image: url('../assets/imgs/Arrow.png');    
     background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 10px) calc(1em + 2px);
-    background-size: 30px 30px, 30px 30px, 1px 1px;
+    background-size: 30px 30px, 30px 30px, 1px 1px;*/
     background-repeat: no-repeat;
 }
 
@@ -390,8 +420,8 @@ text-align:center;
 }
 
 #svgMapa {
-    scale: .5;
-    transform: translateY(-50%);
+    scale: 1;
+    /*transform: translateY(-50%);*/
     padding: -200px;
 }
 
@@ -459,11 +489,11 @@ height:250px;
     position:relative;
 }
 
-.fa-headset {
+.fa-envelope {
 position:absolute;
-right:10%;
+right:5%;
 top: 25%;
-font-size:55px !important;
+font-size:35px !important;
 }
 
 .footer-header {
@@ -510,7 +540,7 @@ div.col-md-8.liIzq > div:nth-child(1) > li > a {
 
 .row.pieCnvl a {
     color: #7a7a7a;
-    font-size: .6em;
+    font-size: 12.5px !important;
     font-weight: 300;
 }
 
@@ -619,5 +649,86 @@ transform:translate(-50%,-50%)
     color: var(--pink);
 }
 
+.swiper-slide {
+
+}
+.sliderText {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    transform:translate(-50%,-50%);
+    left:50%;
+    top:40%;
+}
+.swiper-dark-background {
+    position: absolute;
+    z-index: 10000;
+    background-color: rgb(0 0 0 / 0.70);
+    width: 100%;
+    height: 83%;
+}
+
+.swiper-slide p {
+    position: absolute;
+    z-index: 90000 !important;
+}
+
+
+
+
+.title-main_elements h2 {
+    color: var(--pink);
+    font: font-family: 'Poppins', sans-serif;
+}
 
         /*Inicia vista por practica*/
+.swiper-slide:hover {
+    cursor: pointer !important;
+}
+
+    .swiper-slide:hover .swiper-dark-background {
+        display: none;
+    }
+
+
+
+    /*Responsive*/
+@media (min-width: 992px) {
+    .center-content {
+        position: absolute;
+        transform: translate(0%,50%);
+    }
+
+}
+
+@media (max-width: 991px) {
+    .row div select {
+        background-color: none;
+        border-bottom: 2px solid var(--pink) !important;
+        width: 85%;
+        border: none;
+        height: 50px;
+        color: var(--pink);
+        font-weight: 600;
+        padding-left: 20px;
+        font-size: 15px;
+        margin-left: 5px;
+        margin-top: 15px;
+        /*    background-image: url('../assets/imgs/Arrow.png');    
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 10px) calc(1em + 2px);
+    background-size: 30px 30px, 30px 30px, 1px 1px;*/
+        background-repeat: no-repeat;
+    }
+
+
+    .footer-header {
+        height:auto;
+        display:block;
+        width: 100%;
+    }
+
+    #imgIgualdadFooter, #imgSelloFooter {
+        position: relative;
+        transform: translate(-50%,0);
+        left: 50%;
+    }
+}

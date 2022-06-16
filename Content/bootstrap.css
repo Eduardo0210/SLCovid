@@ -3555,6 +3555,7 @@ input[type="button"].btn-block {
 }
 .collapse.in {
   display: block;
+  height: 239px !important;
 }
 tr.collapse.in {
   display: table-row;

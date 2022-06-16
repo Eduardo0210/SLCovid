@@ -8,27 +8,32 @@ namespace SLCovid.Models
     //This class represents the Json Master Object and contains all his attributes
     public class Practices
     {
-        public string name { get; set; }
-        public string infographicLink { get; set; }
-        public string fbLink { get; set; }
-        public string pnLink { get; set; }
-        public string gmLink { get; set; }
-        public string description { get; set; }
-        public string whyIsGood { get; set; }
-        public string location { get; set; }
-        public string ods { get; set; }
-        public string contact { get; set; }
-        public string linkDownload1 { get; set; }
-        public string linkDownload2 { get; set; }
-        public string linkDownload3 { get; set; }
-        public string linkDownload4 { get; set; }
-        public string linkDownload5 { get; set; }
-        public string explore1 { get; set; }
-        public string explore2 { get; set; }
-        public string explore3 { get; set; }
-        public string explore4 { get; set; }
-        public string explore5 { get; set; }
-        public string category { get; set; }
-        public string image { get; set; }
+        public string nombre { get; set; }
+        public string odsRelacionado { get; set; }
+        public string anexo { get; set; }
+        public int reacciones { get; set; }
+        public int meEncanta { get; set; }
+        public int meAsombra { get; set; }
+        public List<PracticaListas> listasPracticas { get; set; }
+        public int kiidPractica { get; set; }
+    }
+
+
+    public class PracticaListas
+    { 
+        public int kiidPractica { get; set; }
+        public string nombre { get; set; }
+        public int kiidCategoria { get; set; }
+        public string institucion { get; set; }
+        public string estado { get; set; }
+        public string tipo { get; set; }
+        public string consiste { get; set; }
+        public string objetivo { get; set; }
+        public string importante { get; set; }
+        public string linkFinal { get; set; }
+        public string odsRelacionado { get; set; }
+        public string anexo { get; set; }
+        public int reacciones { get; set; }
+    
     }
 }

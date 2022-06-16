@@ -1,4 +1,6 @@
 ﻿
+@model SLCovid.Models.Practices 
+
 @{
     ViewBag.Title = "PracticeVie";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -13,98 +15,261 @@
             <div class="col-sm-12">
                 <img class="buenasPracticas--Logo" src="~/assets/imgs/Logo_Buenas_Practicas_horizontal.png" />
             </div>
-            <div class="pvPrincipalImage-title">
-                <h2>Título de la buena práctica</h2>
-            </div>
+            <div style="font-size:20px !important" class="col-md-12 goodPractices-text blue-header-tittle">
+                @Model.nombre
+            </div>           
+
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="thumbnail">
-                        <img src="~/assets/imgs/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg" />
-                        <div class="caption">
-                            <h4>Subtitulo de la buena practica</h4>
-                            <p> Tempor zzril et at sanctus ut gubergren est dolore sit takimata voluptua dolor dolores amet ut dolor duo duis et at molestie lorem amet at facilisis lorem lorem duo in dolor dolore magna no est dolore et diam consequat eros veniam tincidunt dolor dolor sit in eos kasd blandit autem</p>
-                            <div class="row">
-                                <div class="col-sm-12 text-right">
-                                    <img src="~/assets/imgs/facebook.png" />
-                                    <img src="~/assets/imgs/whatsap.png" />
-                                    <img src="~/assets/imgs/gmail.png" />
-                                </div>
+                <div class="col-sm-12 text-center">
+                    <img style="width:100%" class="border-paint" idPrincipal="" src='@Url.Content("/assets/imgs/ImagenesBuenasPracticas/Infografia" + Request["kiidPractica"] + ".jpg")' />
+
+                </div>
+                <div class="col-sm-10 text-right container-icons-share">
+                    <button onclick="like(3)" class="btn btn-primary like_button" style="background:none; border:none;" type="button">
+                        <img style="height:45px; width:45px;" src="~/assets/imgs/Asombro.png" /> <span id="meAsombraBadge" class="badge">@Model.meAsombra</span>
+                    </button>
+                    <button onclick="like(2)" class="btn btn-primary like_button" style="background:none; border:none;" type="button">
+                        <img style="height:45px; width:45px;" src="~/assets/imgs/Corazon.png" /> <span id="meEncantaBadge" class="badge">@Model.meEncanta</span>
+                    </button>
+                    <button onclick="like(1)" class="btn btn-primary like_button" style="background:none; border:none;" type="button">
+
+                        <img style="height:45px; width:45px;" src="~/assets/imgs/me_gusta.png" /> <span id="reaccionesBadge" class="badge">@Model.reacciones</span>
+                    </button>
+                </div>
+                @*<div class="col-sm-12">
+                <div class="thumbnail">
+                    <img src="~/assets/imgs/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg" />
+                    <div class="caption">
+                        <h4>Subtitulo de la buena practica</h4>
+                        <p> Tempor zzril et at sanctus ut gubergren est dolore sit takimata voluptua dolor dolores amet ut dolor duo duis et at molestie lorem amet at facilisis lorem lorem duo in dolor dolore magna no est dolore et diam consequat eros veniam tincidunt dolor dolor sit in eos kasd blandit autem</p>
+                        <div class="row">
+                            <div class="col-sm-12 text-right">
+                                <img src="~/assets/imgs/facebook.png" />
+                                <img src="~/assets/imgs/whatsap.png" />
+                                <img src="~/assets/imgs/gmail.png" />
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>*@
             </div>
         </div>
     </section>
-    <section>
-        <div class="row">
-            <div class="title-main_elements">
-                <h2>Elementos claves</h2>
-            </div>
+    @*<section>
             <div class="row">
-                <div class="col-sm-2">
-                    <img src="~/assets/imgs/índice.jpg" />
+                <div class="title-main_elements">
+                    <h2>Elementos claves</h2>
                 </div>
-                <div class="col-sm-8 felx-mode">
-                    <div>
-                        <button class="button_mainElement" >¿Por qué es una buena practica?</button>
-                        <button class="button_mainElement ml" data-toggle="popover" title="ODS al que contribuye" data-content="">ODS al que contribuye</button>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <img src="~/assets/imgs/índice.jpg" />
+                    </div>
+                    <div class="col-sm-8 felx-mode">
+                        <div>
+                            <button class="button_mainElement" >¿Por qué es una buena practica?</button>
+                            <button class="button_mainElement ml" data-toggle="popover" title="ODS al que contribuye" data-content="">ODS al que contribuye</button>
+
+                        </div>
+                        <div>
+                            <button class="button_mainElement">Periodo de implementación</button>
+                            <button class="button_mainElement ml">Contacto</button>
+                        </div>
+
+                        <div>
+                            <button class="button_mainElement">Ubicación/Estado</button>
+                            <button class="button_mainElement ml">Recursos Adicionales</button>
+                        </div>
+
+
+                        <div id="customdiv" style="display: none">
+                            <img class="popoverImage" src="~/assets/imgs/ODS/1-02.jpg" />
+                            <img class="popoverImage" src="~/assets/imgs/ODS/1-03.jpg" />
+                            <img class="popoverImage" src="~/assets/imgs/ODS/1-04.jpg" />
+
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
 
                     </div>
-                    <div>
-                        <button class="button_mainElement">Periodo de implementación</button>
-                        <button class="button_mainElement ml">Contacto</button>
-                    </div>
+                </div>
+            </div>
+        </section>*@
 
-                    <div>
-                        <button class="button_mainElement">Ubicación/Estado</button>
-                        <button class="button_mainElement ml">Recursos Adicionales</button>
+    <section style="background-color: #E0DED5; padding:20px;">
+        <div class="row text-center ">
+            <div class="title-main_elements">
+                <h2>Detalles de la práctica</h2>
+                <p class="goodPractices-text">¡Revisa más detalles de la buena práctica!</p>
+            </div>
+        </div>
+        <div class="row mt-70">
+            <div class="col-sm-5 ml-20">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="detallesPractica-txtPrincipal">
+                            ODS a los que contribuye
                     </div>
+                    <div class="col-sm-6" id="content-ods">
+                        @{
 
+                            string[] odsArray = Model.odsRelacionado.Split(',');
+
+                        }
+                        @foreach (string ods in odsArray)
+                        {
+
+                        <img style="height:50px; width:50px;" src='@Url.Content("/assets/imgs/ODS/1-" + ods + ".jpg")'/>
+
+                        }                                                
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="margin-left:-10px">
+                <div class="row">
+                    <div class="col-sm-6" style="display:inline">
+                        <p class="detallesPractica-txtPrincipal">Contacto <br /></p>
+
+                        
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="contact-text-mail"><a href="mailto:%20entidadesfederativas@coneval.org.mx">entidadesfederativas@@coneval.org.mx</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 aditional-resources text-right" onclick="verRecursos()">
+                @{
+                    string tipoArchivo = "";
+                    switch (Request["kiidPractica"].ToString()) {
+
+                        case "1":
+                            tipoArchivo = ".zip";
+                            break;
+                        case "2":
+                            tipoArchivo = ".pdf";
+                            break;
+                        case "3":
+                            tipoArchivo = ".pdf";
+                            break;
+                        case "4":
+                            tipoArchivo = ".zip";
+                            break;
+                        case "5":
+                            tipoArchivo = ".zip";
+                            break;
+                        case "6":
+                            tipoArchivo = ".pdf";
+                            break;
+                        case "7":
+                            tipoArchivo = ".pdf";
+                            break;
+                    }
+                        }
+                <div class="col-sm-12" style="display:inline">
+                    <a target="_blank" href="@Url.Content("/assets/adicionales/"+Request["kiidPractica"] + tipoArchivo)"><p class="detallesPractica-txtPrincipal">Recursos adicionales</p></a>
+                </div>
                     
-                    <div id="customdiv" style="display: none">
-                        <img class="popoverImage" src="~/assets/imgs/ODS/1-02.jpg" />
-                        <img class="popoverImage" src="~/assets/imgs/ODS/1-03.jpg" />
-                        <img class="popoverImage" src="~/assets/imgs/ODS/1-04.jpg" />
-                              
+                
+                
+            </div>
+            </div>
+</section>
+
+    <section>
+        <div class="carousel-container mt-5">
+
+            <div class="mapMain">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        @foreach (SLCovid.Models.PracticaListas practica in Model.listasPracticas)
+                        {
+
+
+                            <div class="swiper-slide" onclick="cambiarPagina(@practica.kiidPractica)">
+                                <p class="sliderText">@practica.nombre</p>
+                                <div class="swiper-dark-background">
+                                </div>
+                                <img src="~/assets/imgs/tecnologia-.jpg" />
+                            </div>
+
+                        }
+
+                        ...
                     </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
                 </div>
-                <div class="col-sm-2">
-                    
-                </div>
-            </div>            
+
+            </div>
+
         </div>
     </section>
-
-    <div class="pvMainElement-container">
-        <h3>Explora nuevas practicas</h3>
-        <div class="row">
-            <div class="col-sm-4">
-                <a href="#" class="thumbnail">
-                    <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="#" class="thumbnail">
-                    <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
-                </a>
-            </div>
-            <div class="col-sm-4">
-                <a href="#" class="thumbnail">
-                    <img src="~/assets/imgs/agricultura-e1551193452226.jpg" />
-                </a>
-            </div>            
-        </div>
-    </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="popover"]').popover({
-                html: true,
-                content: function () {
-            return $('#customdiv').html();
-        }  });
+<script src="https://cdn.jsdelivr.net/npm/@Html.Raw("@")splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+<script>
+
+    function cambiarPagina(id) {
+
+                        location.href = "/Home/PracticeView?kiidPractica=" + id;
+                    }
+    $(document).ready(function () {
+        $('[data-toggle="popover"]').popover({
+                        html: true,
+            content: function () {
+                                return $('#customdiv').html();
+                            }
+                        });
+
+                        var swiper = new Swiper(".swiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                        el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                        nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
+    });
+
+    function like(reaccion) {
+        data = { kiidPractica: @Request["kiidPractica"], reaccion: reaccion };
+
+        $.ajax({
+            url: "@Url.Action("LikeButton", "Home")",
+            data: data,
+            type: "post",
+
+        }).done(function (data) {
+
+            if (data == "ok") {
+                if(reaccion == 1)
+                    document.getElementById("reaccionesBadge").innerHTML = @(Model.reacciones+1) ;
+
+                if (reaccion == 2)
+                     document.getElementById("meEncantaBadge").innerHTML = @(Model.meEncanta+1) ;
+
+                if (reaccion == 3)
+                     document.getElementById("meAsombraBadge").innerHTML = @(Model.meAsombra+1) ;
+             }
+
+        })
+    };
+
+
+
 </script>
 

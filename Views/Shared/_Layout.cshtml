@@ -38,12 +38,10 @@
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="col-sm-6 collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Inicio </a></li>
-                            <li><a href="#">Proyecto</a></li>
-                            <li><a href="#">Acerca de</a></li>
-                            <li><a href="#">Contacto</a></li>
-
+                        <ul class="nav navbar-nav" style="font-size:15px">
+                            <li class="active"><a href="@Url.Action("Index","Home")">¿Qué es el repositorio? </a></li>
+                            <li><a href="/Home#mapaPracticas">Lista de buenas prácticas</a></li>
+                            <li><a href="/Home#contacto">Contacto</a></li>                            
                         </ul>
 
                     </div><!-- /.navbar-collapse -->
@@ -72,15 +70,15 @@
 
             <div class="row pieCnvl">
                 <div class="footer-header">
-                    <div class="col-sm-3">
-                        <img src="~/assets/imgs/Igualdad-Laboral.jpg" />
+                    <div class="col-lg-3">
+                        <img id="imgIgualdadFooter" src="~/assets/imgs/Igualdad-Laboral.jpg" />
                     </div>
-                    <div class="col-sm-6" style="text-align:center; color:#797979;">
-                        Av. Insurgentes Sur # 810, colonia Del Valle, Alcaldía Benito Juárez, C.P. 03100, Ciudad de México. Conmutador: (01-55) 54-81-72-00<br>Horario de Oficialía de partes: lunes a viernes de 9:30 a 14:30 horas, y, de 16:00 a 19:00 horas. <br>Si tienes dudas sobre la información publicada en la página web, envía tu consulta al correo: <a href="mailto:%20consultas@coneval.org.mx" class="afooter" target="_blank">consultas@coneval.org.mx</a>.  <br> Si deseas solicitar información al CONEVAL, ejerciendo tu derecho de acceso a la información, presenta tu solicitud aquí:
+                    <div class="col-lg-6" style="text-align:center; color:#797979;">
+                        Av. Insurgentes Sur # 810, colonia Del Valle, Alcaldía Benito Juárez, C.P. 03100, Ciudad de México. Conmutador: (01-55) 54-81-72-00<br>Horario de Oficialía de partes: lunes a viernes de 9:30 a 14:30 horas, y, de 16:00 a 19:00 horas. <br>Si tienes dudas sobre la información publicada en la página web, envía tu consulta al correo: <a href="mailto:%20consultas@coneval.org.mx" class="afooter" style="font-size:13.5px" target="_blank">consultas@coneval.org.mx</a>.  <br> Si deseas solicitar información al CONEVAL, ejerciendo tu derecho de acceso a la información, presenta tu solicitud aquí:
                         <a href="https://www.plataformadetransparencia.org.mx/" class="afooter" target="_blank">https://www.plataformadetransparencia.org.mx/</a> <br>
                     </div>
                     <div class="col-sm-3">
-                        <img src="~/assets/imgs/Sello_Datos.jpg" />
+                        <img id="imgSelloFooter" src="~/assets/imgs/Sello_Datos.jpg" />
                     </div>
                 </div>
                 <div class="horizontal-line mt-5"></div>

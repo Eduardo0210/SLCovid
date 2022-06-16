@@ -4,14 +4,15 @@
 }
 
 body {
-    background-image: url('../../assets/imgs/Fondo-2.jpeg');
+
     background-repeat:no-repeat;
     background-size:cover;
 }
 
 .buenasPracticas--Logo {
  float:right;
-width:50%;
+width:100%;
+height: calc(width/4);
 }
 
 .caption img{
@@ -27,7 +28,7 @@ width:50%;
 
 .title-main_elements h2 {
     font-family: 'Poppins', sans-serif;    
-    font-size: 27px;
+    font-size: 22px;
     padding: 0px;
     line-height: 30px !important;
     color: #010101;
@@ -64,7 +65,7 @@ width:50%;
 
 .pvMainElement-container {
     padding: 15px;
-    background: linear-gradient(0.25turn,var(--blue), #e5e5e5);
+    background: linear-gradient(0.25turn,var(--pink), #e5e5e5);
     text-align: right !important;
     border-radius:6px;
 }
@@ -86,7 +87,7 @@ width:50%;
 .pvPrincipalImage-title h2 {
     padding-top: 20px;
     color: var(--pink);
-    font-size: 45px;
+    font-size: 21px;
     font-weight: 200;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -112,4 +113,96 @@ width:50%;
 .popoverImage{
 width:50px;
 height:50px;
+}
+
+.detallesPractica-txtPrincipal {
+    color: var(--pink);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    position:absolute;
+    width:auto;
+    
+}
+
+    .detallesPractica-txtPrincipal:after {
+        content: '';        
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        bottom: 1px;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: var(--pink);
+        padding:0px 5px 0px 5px;
+    }
+
+
+.detallesPractica-txtPrincipal-last {
+    color: var(--pink);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    width: auto;
+}
+
+    .detallesPractica-txtPrincipal-last:after {
+        content: '';
+        width: 84%;
+        position: absolute;
+        right: 0px;
+        bottom: 1px;
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: var(--pink);
+        padding: 0px 5px 0px 5px;
+    }
+
+.contact-text-mail {
+    font-weight: lighter;
+    font-size: 14.5px;
+    line-height: 1.1em;    
+    margin-left: -80px !important;
+    margin-left: 7px;
+    font-family: 'Poppins', sans-serif;
+    color: #010101;
+}
+
+.aditional-resources {
+    cursor:pointer;
+}
+
+.swiper-slide:hover {
+    cursor: pointer;
+}
+
+.swiper-slide:hover .swiper-dark-background {
+    display:none;
+}
+
+
+.like_button {
+height:55px;
+}
+
+.like_button:hover img {
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.container-icons-share img {
+height:45px;
+width:45px;
+}
+
+.container-icons-share img:hover{
+    cursor:pointer;
+    height:40px;
+    width:40px;
+}
+
+
+.border-paint {
+border:5px solid var(--blue);
 }
